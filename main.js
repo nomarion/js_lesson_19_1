@@ -14,7 +14,6 @@ async function getWeatherWidget() {
         const response =  await fetch('https://api.openweathermap.org/data/2.5/weather?q=Odessa&mode=html&appid=' + TOKEN);
         const widget = await response.text()
         document.getElementById('widget').innerHTML = widget;
-        console.log("Обновил виджет");
     } catch(error) {
         console.error(error);
     }
